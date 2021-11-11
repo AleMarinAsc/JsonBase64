@@ -3,18 +3,23 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="JsonBase64.MainPage">
 
-    <StackLayout>
-        <Frame BackgroundColor="#2196F3" CornerRadius="0">
-            <Label Text="Login" TextColor="White" FontSize="36"/>
-        </Frame>
-        <Label Text="Ingresa tus datos" FontSize="Title" Padding="10"/>
-        <Entry Text="{Binding Username}"/>
-        <Entry IsPassword="true" Text="{Binding Password}"/>
-        <Entry Text="{Binding Nombre}"/>
-        <Entry Text="{Binding Ap1}"/>
-        <Entry Text="{Binding Ap2}"/>
-        <Button Text="Login" Command="{Binding RegisterCommand}"></Button>
-        <Label Text="{Binding JsonResult}" FontSize="18" Padding="10"/>
-    </StackLayout>
+    <ScrollView>
+        <StackLayout>
+            <Frame BackgroundColor="#2196F3" CornerRadius="0">
+                <Label Text="Login" TextColor="White" FontSize="36"/>
+            </Frame>
+            <Label Text="Ingresa tus datos" FontSize="Title" Padding="10"/>
+            <Entry Text="{Binding Username}"/>
+            <Entry IsPassword="true" Text="{Binding Password}"/>
+            <Entry Text="{Binding Nombre}"/>
+            <Entry Text="{Binding Ap1}"/>
+            <Entry Text="{Binding Ap2}"/>
+            <Button Text="Login" Command="{Binding RegisterCommand}"></Button>
+            <Button Text="Tomar foto" Command="{Binding CapturarCommand}"></Button>
+            <Image Source="{Binding Img}" HeightRequest="400"/>
+            <Label Text="{Binding JsonResult}" FontSize="18" Padding="10"/>
+        </StackLayout>
+    </ScrollView>
+ 
 
 </ContentPage>

@@ -9,6 +9,7 @@ namespace JsonBase64
         {
             InitializeComponent();
             BindingContext = new RegisterViewModel();
+            BindingContext = new FotoViewModel();
         }
     }
 }
